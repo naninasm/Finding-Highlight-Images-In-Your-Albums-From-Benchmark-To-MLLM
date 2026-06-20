@@ -6,25 +6,18 @@ Our work introduces a comprehensive framework for Affective Highlight Recommenda
 
 ## Overview
 Finding Highlight Images In Your Albums: From Benchmark To MLLM
-## Implementation
-This project is built based on the **[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)** framework. We leverage its efficient fine-tuning pipeline to achieve emotional-aware generation and aesthetic scoring.
-
 ## Model Weights (LoRA)
 We provide the model training weights based on the PEC dataset, which are hosted on Hugging Face:
-- **Repo:** [suncongcong/AHR-PEC](https://huggingface.co/suncongcong/AHR-PEC)
+**Repo:** [suncongcong/AHR-PEC](https://huggingface.co/suncongcong/AHR-PEC)
 
 These LoRA weights are specifically trained for the Qwen/Qwen3-VL-8B-Instruct base model. You can load these weights to integrate affective intelligence into your vision-language pipelines.
 
 ## Dataset: PEC and CUFED
 The PEC and CUFED dataset is available for research purposes:
-- **Link:** [https://pan.baidu.com/s/1-kLIYzQKNMLRVCL4NubrlA](https://pan.baidu.com/s/1-kLIYzQKNMLRVCL4NubrlA)
-- **Extraction Code:** `qrls`
-
-## 🛠️ Inference
-This repository provides a unified script `unified_inference.py` to perform affective highlight recommendation. We support two inference modes: **Global** (Album-level context) and **Local** (Single-image scoring).
+**Link:** [https://pan.baidu.com/s/1-kLIYzQKNMLRVCL4NubrlA](https://pan.baidu.com/s/1-kLIYzQKNMLRVCL4NubrlA)
+**Extraction Code:** `qrls`
 
 ## Inference
-
 We provide a unified script `infer.py` to evaluate images using our trained model. The script supports distributed inference via `torchrun` and offers two evaluation modes: **Global** and **Local**.
 ### Local 
 ```bash
@@ -35,7 +28,7 @@ torchrun --nnodes 1 --nproc_per_node 8 infer.py \
     --test_data_path <path_to_test_data_json> \
     --local_output_dir <path_to_output_directory>
 ```
-### Global Mode
+### Global 
 ```bash
 torchrun --nnodes 1 --nproc_per_node 8 infer.py \
     --task global \
