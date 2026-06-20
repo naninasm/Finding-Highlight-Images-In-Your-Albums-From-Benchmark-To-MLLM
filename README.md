@@ -2,20 +2,22 @@
 
 This repository provides the official implementation and LoRA weights for our paper: **"Finding Highlight Images In Your Albums: From Benchmark To MLLM"**.
 
-Our work introduces a comprehensive framework for Affective Highlight Recommendation (AHR), bridging the gap between traditional album-level benchmarks and modern MLLM-based inference. The model is fine-tuned using the **[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)** framework.
-
 ## Overview
 Finding Highlight Images In Your Albums: From Benchmark To MLLM
+
+## Implementation
+This project is built based on the **[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)** framework. We leverage its efficient fine-tuning pipeline to achieve emotional-aware generation and aesthetic scoring.
+
 ## Model Weights (LoRA)
 We provide the model training weights based on the PEC dataset, which are hosted on Hugging Face:
-**Repo:** [suncongcong/AHR-PEC](https://huggingface.co/suncongcong/AHR-PEC)
+- **Repo:** [suncongcong/AHR-PEC](https://huggingface.co/suncongcong/AHR-PEC)
 
 These LoRA weights are specifically trained for the Qwen/Qwen3-VL-8B-Instruct base model. You can load these weights to integrate affective intelligence into your vision-language pipelines.
 
 ## Dataset: PEC and CUFED
 The PEC and CUFED dataset is available for research purposes:
-**Link:** [https://pan.baidu.com/s/1-kLIYzQKNMLRVCL4NubrlA](https://pan.baidu.com/s/1-kLIYzQKNMLRVCL4NubrlA)
-**Extraction Code:** `qrls`
+- **Link:** [https://pan.baidu.com/s/1-kLIYzQKNMLRVCL4NubrlA](https://pan.baidu.com/s/1-kLIYzQKNMLRVCL4NubrlA)
+- **Extraction Code:** `qrls`
 
 ## Inference
 We provide a unified script `infer.py` to evaluate images using our trained model. The script supports distributed inference via `torchrun` and offers two evaluation modes: **Global** and **Local**.
