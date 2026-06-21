@@ -6,7 +6,7 @@ This repository provides the official implementation and LoRA weights for our pa
 Finding Highlight Images In Your Albums: From Benchmark To MLLM
 
 ## Implementation
-This project is built based on the **[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)** framework. We leverage its efficient fine-tuning pipeline to achieve emotional-aware generation and aesthetic scoring.
+This project is built based on the **[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)** framework. We leverage its efficient fine-tuning pipeline to achieve highlight scoring.
 
 ## Model Weights (LoRA)
 We provide the model training weights based on the PEC dataset, which are hosted on Hugging Face:
